@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 20px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  height: 100vh;
+}
+
+.container .title {
+  font-size: 1.8rem;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  margin-top: 2rem;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+.container .title:hover {
+  color: yellow;
+}
+
+.container .description {
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+  font-size: 1rem;
+  color: white;
+  margin-top: 1.3rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.container .description:hover {
+  color: yellow;
+}
+
+.glitch {
+  color: white;
+  position: relative;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes noise-anim {
+  0% {
+    clip: rect(12px, 9999px, 60px, 0);
+  }
+  5% {
+    clip: rect(15px, 9999px, 30px, 0);
+  }
+  10% {
+    clip: rect(16px, 9999px, 21px, 0);
+  }
+  15% {
+    clip: rect(54px, 9999px, 33px, 0);
+  }
+  20% {
+    clip: rect(47px, 9999px, 4px, 0);
+  }
+  25% {
+    clip: rect(13px, 9999px, 34px, 0);
+  }
+  30% {
+    clip: rect(15px, 9999px, 8px, 0);
+  }
+  35% {
+    clip: rect(10px, 9999px, 28px, 0);
+  }
+  40% {
+    clip: rect(36px, 9999px, 7px, 0);
+  }
+  45% {
+    clip: rect(15px, 9999px, 26px, 0);
+  }
+  50% {
+    clip: rect(20px, 9999px, 45px, 0);
+  }
+  55% {
+    clip: rect(15px, 9999px, 8px, 0);
+  }
+  60% {
+    clip: rect(15px, 9999px, 3px, 0);
+  }
+  65% {
+    clip: rect(16px, 9999px, 41px, 0);
+  }
+  70% {
+    clip: rect(4px, 9999px, 20px, 0);
+  }
+  75% {
+    clip: rect(11px, 9999px, 18px, 0);
+  }
+  80% {
+    clip: rect(23px, 9999px, 22px, 0);
+  }
+  85% {
+    clip: rect(60px, 9999px, 2px, 0);
+  }
+  90% {
+    clip: rect(36px, 9999px, 44px, 0);
+  }
+  95% {
+    clip: rect(13px, 9999px, 45px, 0);
+  }
+  100% {
+    clip: rect(55px, 9999px, 43px, 0);
+  }
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(12px, 9999px, 60px, 0);
+  }
+  5% {
+    clip: rect(15px, 9999px, 30px, 0);
+  }
+  10% {
+    clip: rect(16px, 9999px, 21px, 0);
+  }
+  15% {
+    clip: rect(54px, 9999px, 33px, 0);
+  }
+  20% {
+    clip: rect(47px, 9999px, 4px, 0);
+  }
+  25% {
+    clip: rect(13px, 9999px, 34px, 0);
+  }
+  30% {
+    clip: rect(15px, 9999px, 8px, 0);
+  }
+  35% {
+    clip: rect(10px, 9999px, 28px, 0);
+  }
+  40% {
+    clip: rect(36px, 9999px, 7px, 0);
+  }
+  45% {
+    clip: rect(15px, 9999px, 26px, 0);
+  }
+  50% {
+    clip: rect(20px, 9999px, 45px, 0);
+  }
+  55% {
+    clip: rect(15px, 9999px, 8px, 0);
+  }
+  60% {
+    clip: rect(15px, 9999px, 3px, 0);
+  }
+  65% {
+    clip: rect(16px, 9999px, 41px, 0);
+  }
+  70% {
+    clip: rect(4px, 9999px, 20px, 0);
+  }
+  75% {
+    clip: rect(11px, 9999px, 18px, 0);
+  }
+  80% {
+    clip: rect(23px, 9999px, 22px, 0);
+  }
+  85% {
+    clip: rect(60px, 9999px, 2px, 0);
+  }
+  90% {
+    clip: rect(36px, 9999px, 44px, 0);
+  }
+  95% {
+    clip: rect(13px, 9999px, 45px, 0);
+  }
+  100% {
+    clip: rect(55px, 9999px, 43px, 0);
+  }
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 13s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim-2 {
+  0% {
+    clip: rect(37px, 9999px, 14px, 0);
+  }
+  5% {
+    clip: rect(46px, 9999px, 12px, 0);
+  }
+  10% {
+    clip: rect(51px, 9999px, 29px, 0);
+  }
+  15% {
+    clip: rect(28px, 9999px, 26px, 0);
+  }
+  20% {
+    clip: rect(49px, 9999px, 35px, 0);
+  }
+  25% {
+    clip: rect(45px, 9999px, 9px, 0);
+  }
+  30% {
+    clip: rect(26px, 9999px, 29px, 0);
+  }
+  35% {
+    clip: rect(6px, 9999px, 5px, 0);
+  }
+  40% {
+    clip: rect(35px, 9999px, 46px, 0);
+  }
+  45% {
+    clip: rect(21px, 9999px, 60px, 0);
+  }
+  50% {
+    clip: rect(56px, 9999px, 22px, 0);
+  }
+  55% {
+    clip: rect(35px, 9999px, 27px, 0);
+  }
+  60% {
+    clip: rect(45px, 9999px, 59px, 0);
+  }
+  65% {
+    clip: rect(55px, 9999px, 55px, 0);
+  }
+  70% {
+    clip: rect(22px, 9999px, 12px, 0);
+  }
+  75% {
+    clip: rect(40px, 9999px, 45px, 0);
+  }
+  80% {
+    clip: rect(21px, 9999px, 25px, 0);
+  }
+  85% {
+    clip: rect(42px, 9999px, 48px, 0);
+  }
+  90% {
+    clip: rect(18px, 9999px, 22px, 0);
+  }
+  95% {
+    clip: rect(8px, 9999px, 5px, 0);
+  }
+  100% {
+    clip: rect(36px, 9999px, 45px, 0);
+  }
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(37px, 9999px, 14px, 0);
+  }
+  5% {
+    clip: rect(46px, 9999px, 12px, 0);
+  }
+  10% {
+    clip: rect(51px, 9999px, 29px, 0);
+  }
+  15% {
+    clip: rect(28px, 9999px, 26px, 0);
+  }
+  20% {
+    clip: rect(49px, 9999px, 35px, 0);
+  }
+  25% {
+    clip: rect(45px, 9999px, 9px, 0);
+  }
+  30% {
+    clip: rect(26px, 9999px, 29px, 0);
+  }
+  35% {
+    clip: rect(6px, 9999px, 5px, 0);
+  }
+  40% {
+    clip: rect(35px, 9999px, 46px, 0);
+  }
+  45% {
+    clip: rect(21px, 9999px, 60px, 0);
+  }
+  50% {
+    clip: rect(56px, 9999px, 22px, 0);
+  }
+  55% {
+    clip: rect(35px, 9999px, 27px, 0);
+  }
+  60% {
+    clip: rect(45px, 9999px, 59px, 0);
+  }
+  65% {
+    clip: rect(55px, 9999px, 55px, 0);
+  }
+  70% {
+    clip: rect(22px, 9999px, 12px, 0);
+  }
+  75% {
+    clip: rect(40px, 9999px, 45px, 0);
+  }
+  80% {
+    clip: rect(21px, 9999px, 25px, 0);
+  }
+  85% {
+    clip: rect(42px, 9999px, 48px, 0);
+  }
+  90% {
+    clip: rect(18px, 9999px, 22px, 0);
+  }
+  95% {
+    clip: rect(8px, 9999px, 5px, 0);
+  }
+  100% {
+    clip: rect(36px, 9999px, 45px, 0);
+  }
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 15s infinite linear alternate-reverse;
+}
+
+.planet {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 60px -20px rgba(255, 189, 3, 0.72), -14px -15px 40px -10px rgba(255, 238, 191, 0.23);
+          box-shadow: 0 0 60px -20px rgba(255, 189, 3, 0.72), -14px -15px 40px -10px rgba(255, 238, 191, 0.23);
+  margin-top: 2rem;
+}
+
+.planet .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-box-shadow: inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+          box-shadow: inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+  border-radius: 50%;
+}
+
+.planet .background {
+  -webkit-animation: translateBackground 40s infinite linear;
+          animation: translateBackground 40s infinite linear;
+  background: url(http://artem.anmedio.ru/dev/planet/mars.jpg) repeat-x;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.planet .clouds {
+  background: url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat-x;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-animation: translateBackground 30s infinite linear;
+          animation: translateBackground 30s infinite linear;
+  opacity: 0.4;
+}
+
+.planet .wrap {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-animation: rotatePlanet 150s infinite linear;
+          animation: rotatePlanet 150s infinite linear;
+}
+
+@-webkit-keyframes translateBackground {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -600px;
+  }
+}
+
+@keyframes translateBackground {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -600px;
+  }
+}
+
+@-webkit-keyframes rotatePlanet {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes rotatePlanet {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    padding: 1rem 10rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0.1rem 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
