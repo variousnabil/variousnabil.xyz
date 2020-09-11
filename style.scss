@@ -35,6 +35,20 @@
 			color: yellow;
 		}
 	}
+	.contact {
+		margin: 4.5rem 0 2rem 0;
+		display: flex;
+		flex-direction: row;
+
+		img {
+			margin-right: 1rem;
+			cursor: pointer;
+			transition-duration: 2s;
+			&:hover {
+				box-shadow: 5px 5px 90px yellow;
+			}
+		}
+	}
 }
 
 .glitch {
@@ -145,12 +159,14 @@
 
 @media (min-width: 800px) {
 	.container {
-		padding: 1rem 10rem;
+		padding: 1rem 10rem 0 10rem;
+		box-sizing: border-box;
 	}
 }
 
 @media (max-width: 800px) {
 	.container {
-		padding: 0.1rem 2rem;
+		padding: 0.1rem 2rem 0 2rem;
+		box-sizing: border-box;
 	}
 }
