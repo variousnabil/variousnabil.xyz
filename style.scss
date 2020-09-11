@@ -13,7 +13,7 @@
 	background-color: black;
 	align-items: center;
 	padding: 1rem;
-	height: 100vh;
+	height: auto;
 	.title {
 		font-size: 1.8rem;
 		color: white;
@@ -168,5 +168,11 @@
 	.container {
 		padding: 0.1rem 2rem 0 2rem;
 		box-sizing: border-box;
+	}
+}
+
+@media (min-width: 1432px) {
+	.container {
+		height: 100vh;
 	}
 }
